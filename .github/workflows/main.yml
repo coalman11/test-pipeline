@@ -29,6 +29,6 @@ jobs:
         ftp-server: ftp://ftp.coalmentech.com/pipeline
         ftp-username: u233443568.coalman
         ftp-password: logitech
-        #local-dir: # optional
+        local-dir: dist/dcmpkl/
         # Passes through options into git-ftp
         #git-ftp-args: # optional
