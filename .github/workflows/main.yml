@@ -22,13 +22,18 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+    - name: Simple FTP deploy
+      uses: kevinpainchaud/simple-ftp-deploy-action@v1.0.1
       with:
-        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ftp://ftp.coalmentech.com/pipeline
-        ftp-username: u233443568.coalman
-        ftp-password: logitech
-        local-dir: dist/dcmpkl/
-        # Passes through options into git-ftp
-        #git-ftp-args: # optional
+        # FTP host
+        ftp_host: ftp.coalmentech.com
+        # FTP username
+        ftp_username: u233443568.coalman
+        # FTP password
+        ftp_password: logitech
+        # The local folder to copy
+        local_source_dir: dist/dcmpkl/
+        # The remote folder
+        dist_target_dir: /test/
+        # Delete files not present in the local folder on the remote folder
+        delete: false
