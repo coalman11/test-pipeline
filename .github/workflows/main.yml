@@ -23,10 +23,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: FTP-Deploy-Action
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ftp.coalmentech.com
-        user: u233443568.coalman
-        password: logitech
-        remoteDir: /test/
-        localDir: dist/dcmpkl/
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.coalmentech.com
+        FTP_USERNAME: u233443568.coalman
+        FTP_PASSWORD: logitech
+        LOCAL_DIR: dist/dcmpkl/
+        REMOTE_DIR: /test/
+        ARGS: --delete --exclude=index2.html
