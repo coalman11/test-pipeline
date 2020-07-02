@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
 
     - name: FTP-Deploy-Action
       uses: sebastianpopp/ftp-action@releases/v2
@@ -29,3 +29,4 @@ jobs:
         user: u233443568.coalman
         password: logitech
         remoteDir: /test/
+        localDir: dist/dcmpkl/
