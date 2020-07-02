@@ -37,4 +37,4 @@ jobs:
         dist_target_dir: /test/
         # Delete files not present in the local folder on the remote folder
         delete: false
-        exclude: ("sample.htm")
+        exclude: ("^sample.htm")
