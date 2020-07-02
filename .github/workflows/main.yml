@@ -20,21 +20,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
 
-    - name: Simple FTP deploy
-      uses: kevinpainchaud/simple-ftp-deploy-action@v1.0.1
+    - name: FTP-Deploy-Action
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-        # FTP host
-        ftp_host: ftp.coalmentech.com
-        # FTP username
-        ftp_username: u233443568.coalman
-        # FTP password
-        ftp_password: logitech
-        # The local folder to copy
-        local_source_dir: dist/dcmpkl/
-        # The remote folder
-        dist_target_dir: /test/
-        # Delete files not present in the local folder on the remote folder
-        delete: false
-        exclude: ("^sample.htm")
+        host: ftp.coalmentech.com
+        user: u233443568.coalman
+        password: logitech
+        remoteDir: /test/
