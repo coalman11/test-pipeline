@@ -30,4 +30,4 @@ jobs:
         FTP_PASSWORD: logitech
         LOCAL_DIR: dist/dcmpkl/
         REMOTE_DIR: /test/
-        ARGS: --delete --exclude=index2.html
+        ARGS: --delete --exclude=sample.htm
