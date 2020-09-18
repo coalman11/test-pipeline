@@ -25,9 +25,9 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
-        FTP_SERVER: ftp.coalmentech.com
-        FTP_USERNAME: u233443568.coalman
-        FTP_PASSWORD: logitech
+        FTP_SERVER: ftp.edinity.in
+        FTP_USERNAME: u988254208.coalman
+        FTP_PASSWORD: eCgyGzU7sR!
         LOCAL_DIR: dist/dcmpkl/
         REMOTE_DIR: /test/
         ARGS: --delete --exclude=sample.htm
